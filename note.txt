@@ -1,0 +1,26 @@
+1. env file.
+2. Session cookie name changed.
+php artisan migrate
+
+/*Role*/
+
+It is possible to use pipe symbol as OR operator:
+'middleware' => ['role:admin|root']
+
+To emulate AND functionality just use multiple instances of middleware
+'middleware' => ['role:owner', 'role:writer']
+
+
+@role('admin')
+    <li><a href="{{ url('admin') }}">Admin Dashboard</a></li>
+@endrole
+
+https://github.com/Zizaco/entrust
+https://packagist.org/packages/zizaco/entrust
+php artisan entrust:migration
+
+php artisan make:seeder PermissionTableSeeder
+
+
+http://itsolutionstuff.com/post/laravel-52-user-acl-roles-and-permissions-with-middleware-using-entrust-from-scratch-tutorialexample.html
+
